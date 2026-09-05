@@ -43,7 +43,8 @@ body {
 
 
 #output {
-    width: 400px;
+    max-width: 400px;
+    width: 90%;
     height: 90px;
     background-color: rgb(48, 43, 43);
     border: 2px rgb(62, 59, 59) solid;
