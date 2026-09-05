@@ -2,60 +2,67 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 45px;
+    min-height: 100vh;
+    margin: 0;
 }
 
-    
 .outerbody {
-    height: 670px;
     width: 90vw;
     max-width: 460px;
     background-color: rgb(0, 0, 0);
     border-radius: 50px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+    box-sizing: border-box;
+}
+
+.screen {
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
 
 .input {
-   margin-top: 160px;
-    width: 380px; 
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);              /* gemini */
-    gap: 10px;                                          /* gemini */
+    gap: 12px;                                          /* gemini */
     justify-items: center;
-    margin-bottom: 15px;
-    margin-top: 170px;
-    padding: 0px 20px;    
+    margin-top: 30px;
+    padding: 0;    
 }
 
 .buttons {
-    height: 75px;
-    width: 75px;
+    width: 100%;
+    max-width: 75px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     background-color: rgb(48, 43, 43);
     /* display: inline-block; */
     border-radius: 50%;
-    font-size: 40px;
+    font-size: clamp(22px, 6vw, 40px);
     color: white;
     border: 2px rgb(62, 59, 59) solid;
     -webkit-text-stroke-color: rgb(0, 0, 0);                /* googled */
     -webkit-text-stroke-width: 0.8px;                         /* googled */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-
 #output {
-    max-width: 400px;
-    width: 85%;
+    width: 100%;
     height: 90px;
     background-color: rgb(48, 43, 43);
     border: 2px rgb(62, 59, 59) solid;
-    position: absolute;
-    margin-top: 40px;
     border-radius: 100px;
     display: flex;
     justify-content: end;
     align-items: center;
-    font-size: 60px;
-    margin-left: 10px;
+    font-size: clamp(35px, 8vw, 60px);
     color: white;
     letter-spacing: 5px;
     padding-right: 20px;                /* gemini */
@@ -69,7 +76,7 @@ body {
     background-color: rgb(255, 111, 0);
     -webkit-text-stroke-width: 0.8px;                           
     -webkit-text-stroke-color: rgb(0, 0, 0);                
-    font-size: 53px;
+    font-size: clamp(30px, 8vw, 53px);
 }
 
 #zerozero {
@@ -78,31 +85,33 @@ body {
 }
 
 #AC {
-    font-size: 33px;
+    font-size: clamp(18px, 5vw, 33px);
 }
 
 #devide {
     -webkit-text-stroke-color: rgb(0, 0, 0);            
     -webkit-text-stroke-width: 0.8px;                    
-    font-size: 55px;
+    font-size: clamp(30px, 8vw, 55px);
 }
 
 #minus {
-    font-size: 56px;
-    padding-bottom: 70px;
+    font-size: clamp(30px, 8vw, 56px);
+    line-height: 0;
+    padding-bottom: 8px;
 }
 
 #multiply {
-    font-size: 52px;
+    font-size: clamp(28px, 8vw, 52px);
 }
 
 #plus {
-    font-size: 50px
+    font-size: clamp(28px, 8vw, 50px);
 }
 
 #backspace {
-    padding-bottom: 10px;
-    padding-left: 3px;
+    font-size: clamp(20px, 5vw, 32px);
+    padding-bottom: 2px;
+    padding-left: 2px;
 }
 
 button, #output { user-select: none; }
